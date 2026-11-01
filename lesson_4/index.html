@@ -15,10 +15,10 @@
           <input type="text" name="first-name" placeholder="Имя" required />
         </label>
         <label>
-          <label>
-            Ваш возраст
-            <input type="number" name="age" inputmode="numeric" placeholder="Возраст" required />
-          </label>
+          Ваш возраст
+          <input type="number" name="age" inputmode="numeric" placeholder="Возраст" required />
+        </label>
+        <label>
           Ваш номер телефона
           <input type="tel" inputmode="tel" name="phone" placeholder="Номер телефона" required />
         </label>
@@ -28,14 +28,16 @@
         </label>
       </fieldset>
       <fieldset>
-        <legend>Сообщение</legend>
-        <textarea class="text" name="text" placeholder="Ваше сообщение" required></textarea>
+        <label>
+          <legend>Сообщение</legend>
+          <textarea class="text" name="text" placeholder="Ваше сообщение" required></textarea>
+        </label>
         <label class="checkbox">
           <input type="checkbox" name="check" required />
           Я принимаю правила
         </label>
-        <button type="submit">Отправить</button>
       </fieldset>
+      <button type="submit">Отправить</button>
     </form>
   </body>
 </html>
