@@ -67,3 +67,7 @@ textarea {
 .checkbox {
     display: block;
 }
+
+.flag {
+    cursor: pointer;
+}
