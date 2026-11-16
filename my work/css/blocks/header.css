@@ -1,0 +1,633 @@
+.header {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding-bottom: 120px;
+  background: var(--header-background);
+  overflow: hidden;
+}
+
+.header__decor {
+  position: absolute;
+  top: var(--decor-top);
+  right: var(--decor-right);
+  width: min(var(--decor-width), 36vw);
+  height: auto;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Общие стили для всех нейронов */
+.header__neuron {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  mix-blend-mode: var(--neuron-blend-mode);
+}
+
+.header__neuron-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: contrast(var(--neuron-contrast));
+}
+
+/* Левый нижний нейрон */
+.header__neuron--left {
+  bottom: var(--neuron-left-bottom);
+  left: 0;
+  width: var(--neuron-left-width);
+  max-width: var(--neuron-left-max-width);
+  -webkit-mask-image:
+    linear-gradient(to right, #000 50%, transparent 98%),
+    linear-gradient(to top, transparent 0%, #000 10%, #000 65%, transparent 98%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to right, #000 50%, transparent 98%),
+    linear-gradient(to top, transparent 0%, #000 10%, #000 65%, transparent 98%);
+  mask-composite: intersect;
+}
+
+/* Верхний нейрон */
+.header__neuron--top {
+  top: var(--neuron-top-top);
+  left: var(--neuron-top-left);
+  width: var(--neuron-top-width);
+  max-width: var(--neuron-top-max-width);
+  -webkit-mask-image:
+    linear-gradient(to right, transparent 0%, #000 15%, #000 85%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, #000 12%, #000 65%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to right, transparent 0%, #000 15%, #000 85%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, #000 12%, #000 65%, transparent 100%);
+  mask-composite: intersect;
+}
+
+/* Правый большой нейрон */
+.header__neuron--right {
+  top: auto;
+  bottom: var(--neuron-right-bottom);
+  right: var(--neuron-right-right);
+  width: var(--neuron-right-width);
+  max-width: var(--neuron-right-max-width);
+  -webkit-mask-image:
+    linear-gradient(to left, #000 72%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, #000 18%, #000 88%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to left, #000 72%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, #000 18%, #000 88%, transparent 100%);
+  mask-composite: intersect;
+}
+
+/* Контейнер контента поверх нейронов */
+.header__container {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Верхняя панель шапки */
+.header__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--header-top-padding);
+}
+
+/* Логотип */
+.logo {
+  display: inline-block;
+  width: var(--logo-width);
+  flex-shrink: 0;
+  transition: opacity 0.2s ease;
+}
+
+.logo:hover {
+  opacity: 0.85;
+}
+
+.logo__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Верхняя панель шапки */
+.header__top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--header-top-padding);
+}
+
+/* Голубое свечение за логотипом */
+.header__glow {
+  position: absolute;
+  top: var(--header-glow-top);
+  left: var(--header-glow-left);
+  width: var(--header-glow-size);
+  height: var(--header-glow-size);
+  border-radius: 50%;
+  background-color: var(--header-glow-color);
+  opacity: var(--header-glow-opacity);
+  filter: blur(var(--header-glow-blur));
+  pointer-events: none;
+  z-index: -1;
+}
+
+.header__content {
+  padding-top: var(--header-content-top);
+}
+
+/* Надпись над главным заголовком */
+.header__subtitle {
+  margin: 0 0 var(--header-subtitle-gap);
+  font-family: var(--font-family);
+  font-weight: var(--header-subtitle-weight);
+  font-size: var(--header-subtitle-size);
+  line-height: 1.2;
+  color: var(--header-subtitle-color);
+}
+
+/* Главный заголовок */
+.header__title {
+  width: fit-content;
+  margin: 0 0 var(--header-title-gap);
+  font-family: var(--font-family);
+  font-weight: var(--header-title-weight);
+  font-size: var(--header-title-size);
+  line-height: 1.1;
+  background: var(--header-title-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Описание под главным заголовком */
+.header__desc {
+  max-width: var(--header-desc-max-width);
+  margin: 0 0 var(--header-desc-gap);
+  font-family: var(--font-family);
+  font-weight: var(--header-desc-weight);
+  font-size: var(--header-desc-size);
+  line-height: 1.4;
+  color: var(--header-desc-color);
+}
+
+/* Блок преимущества с гарантией */
+.header__benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--header-benefit-gap);
+  max-width: var(--header-benefit-max-width);
+  margin-bottom: var(--header-benefit-bottom-gap);
+}
+
+/* Квадратная обводка под иконку */
+.header__benefit-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: var(--header-benefit-icon-size);
+  height: var(--header-benefit-icon-size);
+  border-radius: var(--header-benefit-icon-radius);
+  background: var(--header-benefit-icon-bg);
+  border: var(--header-benefit-icon-border);
+}
+
+.header__benefit-img {
+  display: block;
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+/* Текст части преимуществ */
+.header__benefit-title {
+  margin: 0 0 6px;
+  font-family: var(--font-family);
+  font-weight: var(--header-benefit-title-weight);
+  font-size: var(--header-benefit-title-size);
+  line-height: 1.25;
+  color: var(--header-benefit-title-color);
+}
+
+.header__benefit-text {
+  margin: 0;
+  font-family: var(--font-family);
+  font-weight: var(--header-benefit-text-weight);
+  font-size: var(--header-benefit-text-size);
+  line-height: 1.32;
+  color: var(--header-benefit-text-color);
+}
+
+.header__benefit-accent {
+  color: var(--header-benefit-accent-color);
+}
+
+/* Большая кнопка действия записи на вебинар в хедере */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: var(--btn-max-width);
+  min-height: var(--btn-height);
+  padding: 16px 24px;
+  border: none;
+  border-radius: var(--btn-radius);
+  background: var(--btn-bg);
+  box-shadow: var(--btn-shadow);
+  font-family: var(--font-family);
+  font-weight: var(--btn-font-weight);
+  font-size: var(--btn-font-size);
+  line-height: 1.4;
+  letter-spacing: var(--btn-letter-spacing);
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--btn-color);
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    filter 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px -5px #00e0ff;
+  filter: brightness(1.08);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+/* Блок телефона в шапке */
+.phone {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--phone-gap);
+  font-family: var(--font-family);
+  font-weight: var(--phone-font-weight);
+  font-size: var(--phone-font-size);
+  line-height: 1.2;
+  color: var(--phone-color);
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.phone:hover {
+  color: var(--phone-hover-color);
+}
+
+.phone__icon {
+  display: block;
+  width: var(--phone-icon-size);
+  height: var(--phone-icon-size);
+  flex-shrink: 0;
+}
+
+/* Левая боковая панель бесплатной консультации */
+.header__consult {
+  position: absolute;
+  top: var(--consult-top);
+  left: var(--consult-left);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--consult-gap);
+}
+
+/* Внешний полупрозрачный круг (139x139) */
+.header__consult-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--consult-outer-size);
+  height: var(--consult-outer-size);
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--consult-outer-bg);
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.header__consult-btn:hover {
+  transform: scale(1.06);
+  background-color: rgba(0, 224, 255, 0.12);
+}
+
+/* Внутренний светящийся круг (100x100) */
+.header__consult-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--consult-inner-size);
+  height: var(--consult-inner-size);
+  border-radius: 50%;
+  background: var(--btn-bg);
+  box-shadow: var(--btn-shadow);
+}
+
+.header__consult-icon {
+  display: block;
+  width: var(--consult-icon-size);
+  height: var(--consult-icon-size);
+  object-fit: contain;
+}
+
+/* Вертикальная надпись для копки связи */
+.header__consult-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-family: var(--font-family);
+  font-weight: var(--consult-text-weight);
+  font-size: var(--consult-text-size);
+  line-height: 1;
+  letter-spacing: var(--consult-text-spacing);
+  text-transform: uppercase;
+  color: var(--consult-text-color);
+  white-space: nowrap;
+  user-select: none;
+}
+
+/* Нижнее центральное свечение в самом низу хедера */
+.header__glow--bottom {
+  top: auto;
+  bottom: var(--header-bottom-glow-bottom);
+  left: calc(50% - 194px);
+  width: var(--header-bottom-glow-size);
+  height: var(--header-bottom-glow-size);
+  border-radius: 50%;
+  background-color: var(--header-bottom-glow-color);
+  opacity: var(--header-bottom-glow-opacity);
+  filter: blur(var(--header-bottom-glow-blur));
+  pointer-events: none;
+  z-index: 1;
+}
+
+.header__scroll {
+  position: absolute;
+  bottom: var(--scroll-bottom);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--scroll-gap);
+}
+
+.header__scroll-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-family: var(--font-family);
+  font-weight: var(--scroll-text-weight);
+  font-size: var(--scroll-text-size);
+  line-height: 1;
+  letter-spacing: var(--scroll-text-spacing);
+  text-transform: uppercase;
+  color: var(--scroll-text-color);
+  white-space: nowrap;
+}
+
+.header__scroll-mouse {
+  display: flex;
+  justify-content: center;
+  width: var(--scroll-mouse-width);
+  height: var(--scroll-mouse-height);
+  padding-top: 6px;
+  border: var(--scroll-mouse-border);
+  border-radius: var(--scroll-mouse-radius);
+}
+
+.header__scroll-dot {
+  display: block;
+  width: var(--scroll-dot-size);
+  height: var(--scroll-dot-size);
+  border-radius: 50%;
+  background-color: var(--scroll-dot-color);
+  box-shadow: var(--scroll-dot-shadow);
+}
+
+@media (min-width: 1920px) {
+  .header__neuron--top {
+    left: calc(50% - 325px);
+  }
+
+  .header__neuron--right {
+    bottom: 95px;
+    right: calc(50% - 1025px);
+  }
+
+  .header__consult {
+    left: calc(50% - 856px);
+  }
+}
+
+/* Ноутбуки и мониторы от 1361px до 1700px */
+@media (max-width: 1700px) {
+  .header__container {
+    padding-left: 140px;
+  }
+
+  .header__consult {
+    left: 24px;
+    top: 150px;
+  }
+
+  .header__consult-btn {
+    width: 96px;
+    height: 96px;
+  }
+
+  .header__consult-circle {
+    width: 68px;
+    height: 68px;
+  }
+
+  .header__consult-icon {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* 2. Ноутбуки (до 1440px) — уменьшает боковую кнопку консультации */
+@media (max-width: 1440px) {
+  .header__container {
+    padding-left: 130px; /* Контент не наедет на кнопку консультации */
+  }
+
+  .header__consult {
+    left: 20px;
+    top: 150px;
+  }
+
+  .header__consult-btn {
+    width: 96px;
+    height: 96px;
+  }
+
+  .header__consult-circle {
+    width: 68px;
+    height: 68px;
+  }
+
+  .header__consult-icon {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* Экраны до 1360px */
+@media (max-width: 1360px) {
+  .header__container {
+    padding-left: var(--container-padding);
+  }
+
+  .header__consult {
+    display: none;
+  }
+}
+
+/* Планшеты и небольшие ноутбуки (до 1150px) */
+@media (max-width: 1150px) {
+  .header__container {
+    padding-left: var(--container-padding);
+  }
+
+  .header__consult {
+    display: none;
+  }
+}
+
+/* 3. Планшеты (до 992px) — убирает боковую панель и индикатор скрола */
+@media (max-width: 992px) {
+  .header__consult,
+  .header__scroll {
+    display: none;
+  }
+
+  .header__neuron--right {
+    opacity: 0.65;
+  }
+}
+
+/* 4. Мобильные устройства (до 768px) */
+@media (max-width: 768px) {
+  .header {
+    min-height: auto;
+    padding-bottom: 48px;
+  }
+
+  .header__top {
+    padding-top: 24px;
+  }
+
+  .phone {
+    gap: 8px;
+  }
+
+  /* Скрытие лишних нейронов, декор и скрол */
+  .header__neuron--left,
+  .header__neuron--top,
+  .header__decor,
+  .header__scroll {
+    display: none;
+  }
+
+  /* Правый нейрон опускаем в самый низ и приглушаем, чтобы текст читался чётко */
+  .header__neuron--right {
+    top: auto;
+    bottom: -40px;
+    right: -15vw;
+    width: 120vw;
+    opacity: 0.35;
+  }
+
+  .header__glow {
+    width: 240px;
+    height: 240px;
+    top: -120px;
+    left: -60px;
+    filter: blur(85px);
+  }
+
+  .header__glow--bottom {
+    width: 260px;
+    height: 260px;
+    bottom: -140px;
+    left: calc(50% - 130px);
+    filter: blur(90px);
+  }
+
+  /* весь текстовый блок по центру */
+  .header__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 40px;
+  }
+
+  .header__subtitle {
+    margin-bottom: 8px;
+  }
+
+  .header__title {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 12px;
+  }
+
+  .header__desc {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 32px;
+  }
+
+  /* Блок с гарантией стоит по центру экрана */
+  .header__benefit {
+    align-items: center;
+    gap: 16px;
+    max-width: 330px;
+    margin: 0 auto 32px;
+    text-align: left;
+  }
+
+  .header__benefit-icon {
+    width: 54px;
+    height: 54px;
+  }
+
+  .header__benefit-img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .header__benefit-title,
+  .header__benefit-text {
+    font-size: 14px;
+  }
+
+  .button {
+    min-height: 54px;
+    padding: 14px 16px;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+  }
+}

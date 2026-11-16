@@ -1,0 +1,149 @@
+:root {
+  /* font-family */
+  --font-family: 'Avenir Next Cyr', sans-serif;
+
+  /* container */
+  --container-width: 1200px;
+  --container-padding: 15px;
+
+  /* header */
+  --header-width: 1920px;
+  --header-height: 1006px;
+  --header-background: linear-gradient(288.41deg, #022335 3.63%, #043a41 90.98%);
+
+  /* header decor */
+  --decor-top: 220px;
+  --decor-right: 84px;
+  --decor-width: 692px;
+
+  /* header-top и logo */
+  --header-top-padding: 46px;
+  --logo-width: clamp(140px, 15vw, 287px);
+
+  /* header phone */
+  --phone-gap: 23px;
+  --phone-icon-size: clamp(14px, 1.3vw, 25px);
+  --phone-font-size: clamp(12px, 1vw, 18px);
+  --phone-font-weight: 500;
+  --phone-color: #ffffff;
+  --phone-hover-color: #00e0ff;
+
+  /* header glow (свечение за логотипом) */
+  --header-glow-size: 438px;
+  --header-glow-color: #00e0ff;
+  --header-glow-opacity: 0.16;
+  --header-glow-blur: 140px;
+  --header-glow-top: -265px;
+  --header-glow-left: -132px;
+
+  /* header bottom glow (нижнее свечение по центру) */
+  --header-bottom-glow-size: 451px;
+  --header-bottom-glow-color: #00e0ff;
+  --header-bottom-glow-opacity: 0.28;
+  --header-bottom-glow-blur: 150px;
+  --header-bottom-glow-bottom: -263px;
+
+  /* header content & subtitle */
+  --header-content-top: clamp(40px, 8vh, 110px);
+  --header-subtitle-size: clamp(14px, 1vw, 18px);
+  --header-subtitle-weight: 600;
+  --header-subtitle-color: #747d81;
+  --header-subtitle-gap: 0px;
+
+  /* header title */
+  --header-title-size: clamp(36px, 5.6vw, 108px);
+  --header-title-weight: 600;
+  --header-title-gradient: linear-gradient(180deg, #fff 31.75%, #1a3031 100%);
+  --header-title-gap: 16px;
+
+  /* header description */
+  --header-desc-size: clamp(14px, 1vw, 18px);
+  --header-desc-weight: 500;
+  --header-desc-color: #ffffff;
+  --header-desc-max-width: 610px;
+  --header-desc-gap: 56px;
+
+  /* header benefit */
+  --header-benefit-max-width: 576px;
+  --header-benefit-gap: 33px;
+  --header-benefit-bottom-gap: 52px;
+
+  --header-benefit-icon-size: 71px;
+  --header-benefit-icon-radius: 12px;
+  --header-benefit-icon-bg: linear-gradient(
+    180deg,
+    rgba(0, 224, 255, 0.11) 0%,
+    rgba(0, 224, 255, 0.05) 100%
+  );
+  --header-benefit-icon-border: 1px solid rgba(0, 224, 255, 0.25);
+
+  --header-benefit-title-size: 18px;
+  --header-benefit-title-weight: 700;
+  --header-benefit-title-color: #ffffff;
+
+  --header-benefit-text-size: 18px;
+  --header-benefit-text-weight: 500;
+  --header-benefit-text-color: #4abcec;
+  --header-benefit-accent-color: #00e0ff;
+
+  /* button */
+  --btn-max-width: 479px;
+  --btn-height: 60px;
+  --btn-radius: 9px;
+  --btn-font-size: 12px;
+  --btn-font-weight: 700;
+  --btn-letter-spacing: 0.25em;
+  --btn-color: #ffffff;
+  --btn-bg: linear-gradient(180deg, rgba(3, 225, 255, 0.66) 0%, #13cdc2 100%);
+  --btn-shadow: 0 7px 20px -7px #00e0ff;
+
+  /* header consult (боковая круглая кнопка консультации) */
+  --consult-top: 132px;
+  --consult-left: 104px;
+  --consult-outer-size: 139px;
+  --consult-outer-bg: rgba(255, 255, 255, 0.05);
+  --consult-inner-size: 100px;
+  --consult-icon-size: 40px;
+  --consult-gap: 20px;
+
+  --consult-text-size: 10px;
+  --consult-text-weight: 600;
+  --consult-text-spacing: 0.36em;
+  --consult-text-color: #00e0ff;
+
+  /* header bottom scroll */
+  --scroll-bottom: 45px;
+  --scroll-gap: 18px;
+  --scroll-text-size: 10px;
+  --scroll-text-weight: 600;
+  --scroll-text-spacing: 0.36em;
+  --scroll-text-color: #747d81;
+  --scroll-mouse-width: 20px;
+  --scroll-mouse-height: 37px;
+  --scroll-mouse-border: 1px solid #4abcec;
+  --scroll-mouse-radius: 60px;
+  --scroll-dot-size: 10px;
+  --scroll-dot-color: #4abcec;
+  --scroll-dot-shadow: 0 4px 10px 0 rgba(74, 188, 236, 0.75);
+
+  /* neurons - общие настройки */
+  --neuron-blend-mode: lighten;
+  --neuron-contrast: 1.15;
+
+  /* neuron-left */
+  --neuron-left-width: 17vw;
+  --neuron-left-max-width: 340px;
+  --neuron-left-bottom: -5px;
+
+  /* neuron-top */
+  --neuron-top-width: 35vw;
+  --neuron-top-max-width: 668px;
+  --neuron-top-top: -5px;
+  --neuron-top-left: 33vw;
+
+  /* neuron-right */
+  --neuron-right-width: 55.5vw;
+  --neuron-right-max-width: 1065px;
+  --neuron-right-bottom: 6vh;
+  --neuron-right-right: -3.5vw;
+}
