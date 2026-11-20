@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>California</title>
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+<header class="header">
+  <div class="header__container">
+    
+    <!-- Логотип -->
+    <a href="#" class="header__logo" aria-label="На главную">
+      <img src="icons/logo.svg" alt="California" class="header__logo-img">
+    </a>
+
+    <!-- Бургер-меню (чекбокс + иконка) -->
+    <input type="checkbox" id="burger-toggle" class="header__burger-toggle">
+    <label for="burger-toggle" class="header__burger" aria-label="Открыть меню">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <nav class="header__nav nav">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a href="#" class="nav__link">ALL PRODUCTS</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">SOLUTIONS</a>
+          <img src="icons/arrow-down.svg" alt="Open submenu" class="nav__icon-dropdown">
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">ABOUT</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">SUPPORT</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="header__actions actions">
+      <button type="button" class="actions__btn" aria-label="Поиск">
+        <img src="icons/search.svg" alt="Search" class="actions__icon">
+      </button>
+      <button type="button" class="actions__btn" aria-label="Корзина">
+        <img src="icons/cart.svg" alt="Cart" class="actions__icon">
+      </button>
+    </div>
+  </div>
+</header>
+</body>
+</html>
