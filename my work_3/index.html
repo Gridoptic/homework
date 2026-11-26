@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>California</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container container">
+        <a href="#" class="header__logo" aria-label="На главную">
+          <img src="icons/logo.svg" alt="California" class="header__logo-img" />
+        </a>
+        <input type="checkbox" id="burger-toggle" class="header__burger-toggle" />
+        <nav class="header__nav nav">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#" class="nav__link">ALL PRODUCTS</a></li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">SOLUTIONS</a>
+              <img src="icons/arrow-down.svg" alt="Open submenu" class="nav__icon-dropdown" />
+            </li>
+            <li class="nav__item"><a href="#" class="nav__link">ABOUT</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">SUPPORT</a></li>
+          </ul>
+        </nav>
+        <div class="header__right">
+          <div class="header__actions actions">
+            <button type="button" class="actions__btn" aria-label="Поиск">
+              <img src="icons/search.svg" alt="Search" class="actions__icon" />
+            </button>
+            <button type="button" class="actions__btn" aria-label="Корзина">
+              <img src="icons/cart.svg" alt="Cart" class="actions__icon" />
+            </button>
+          </div>
+          <label for="burger-toggle" class="header__burger" aria-label="Открыть меню">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="hero__container container">
+        <button class="hero__arrow hero__arrow--left" aria-label="Назад">
+          <img src="icons/arrow-left.svg" alt="Назад" />
+        </button>
+        <div class="hero__content">
+          <h1 class="hero__title">The new phones are<br />here take a look.</h1>
+          <p class="hero__desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque in est dui,
+            aliquam, tempor. Faucibus morbi turpis.
+          </p>
+          <button class="hero__btn">Explore</button>
+        </div>
+        <div class="hero__image">
+          <img src="icons/hero-phones.svg" alt="Смартфоны" />
+        </div>
+        <div class="hero__dots">
+          <span class="hero__dot hero__dot--active"></span>
+          <span class="hero__dot"></span>
+          <span class="hero__dot"></span>
+        </div>
+        <button class="hero__arrow hero__arrow--right" aria-label="Вперед">
+          <img src="icons/arrow-right.svg" alt="Вперед" />
+        </button>
+      </div>
+    </section>
+    <section class="categories">
+      <div class="categories__header">
+        <h2 class="categories__title">Shop our latest offers and categories</h2>
+        <p class="categories__description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Select. Sed ut diam, aliquam.
+          Tempor. Faucibus morbi turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </div>
+      <div class="categories__grid">
+        <div class="category-laptop">
+          <img class="category-laptop__image" src="images/category-laptop.png" alt="Laptop" />
+          <span class="category-laptop__label">Laptops</span>
+          <h3 class="category-laptop__title">True Laptop<br />Solution</h3>
+        </div>
+        <div class="category-watch">
+          <img class="category-watch__image" src="images/category-watch.png" alt="Watch" />
+          <span class="category-watch__label">Watch</span>
+          <h3 class="category-watch__title">Not just<br />stylisht</h3>
+        </div>
+        <div class="category-phones">
+          <img class="category-phones__image" src="images/category-phones.png" alt="Phones" />
+          <span class="category-phones__label">Phones</span>
+          <h3 class="category-phones__title">Your day to day<br />life</h3>
+        </div>
+        <div class="category-tablet">
+          <img class="category-tablet__image" src="images/category-tablet.png" alt="Tablet" />
+          <span class="category-tablet__label">Tablet</span>
+          <h3 class="category-tablet__title">Empower your<br />work</h3>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
