@@ -1,0 +1,151 @@
+.ideas {
+  width: 100%;
+  max-width: 1350px;
+  margin: 47px auto 0;
+  padding: 0 28px 24px;
+  box-sizing: border-box;
+}
+
+.ideas__container {
+  max-width: 1294px;
+  margin: 0 auto;
+}
+
+.ideas__header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.ideas__title {
+  margin: 0 0 9px 0;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 125%;
+  text-align: center;
+  color: #000;
+}
+
+.ideas__desc {
+  margin: 0 auto;
+  max-width: 450px;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 129%;
+  text-align: center;
+  color: #000;
+}
+
+.ideas__content {
+  display: grid;
+  grid-template-columns: 620fr 639fr;
+  gap: 35px;
+  align-items: start;
+}
+
+.ideas__image-wrap {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.ideas__image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.ideas__list {
+  margin: 0;
+  padding: 14px 0 0 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+
+.ideas__item {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 125%;
+  color: #000;
+}
+
+.ideas__footer {
+  margin-top: 74px;
+  text-align: center;
+}
+
+.ideas__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 120%;
+  text-transform: capitalize;
+  text-decoration: none;
+  color: #000;
+  transition: opacity 0.2s ease;
+}
+
+.ideas__link:hover {
+  opacity: 0.65;
+}
+
+.ideas__link-icon {
+  width: 30px;
+  height: 28px;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+@media (max-width: 1315px) {
+  .ideas {
+    padding: 0 20px 40px;
+  }
+
+  .ideas__content {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .ideas__list {
+    padding-top: 0;
+    gap: 18px;
+  }
+
+  .ideas__item {
+    font-size: 20px;
+  }
+
+  .ideas__footer {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .ideas__title {
+    font-size: 32px;
+  }
+
+  .ideas__content {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    gap: 28px;
+  }
+
+  .ideas__item {
+    font-size: 18px;
+  }
+
+  .ideas__link {
+    font-size: 20px;
+  }
+}

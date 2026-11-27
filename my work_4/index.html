@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>California</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container container">
+        <a href="#" class="header__logo" aria-label="На главную">
+          <img src="icons/logo.svg" alt="California" class="header__logo-img" />
+        </a>
+        <input type="checkbox" id="burger-toggle" class="header__burger-toggle" />
+        <nav class="header__nav nav">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#" class="nav__link">ALL PRODUCTS</a></li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">SOLUTIONS</a>
+              <img src="icons/arrow-down.svg" alt="Open submenu" class="nav__icon-dropdown" />
+            </li>
+            <li class="nav__item"><a href="#" class="nav__link">ABOUT</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">SUPPORT</a></li>
+          </ul>
+        </nav>
+        <div class="header__right">
+          <div class="header__actions actions">
+            <button type="button" class="actions__btn" aria-label="Поиск">
+              <img src="icons/search.svg" alt="Search" class="actions__icon" />
+            </button>
+            <button type="button" class="actions__btn" aria-label="Корзина">
+              <img src="icons/cart.svg" alt="Cart" class="actions__icon" />
+            </button>
+          </div>
+          <label for="burger-toggle" class="header__burger" aria-label="Открыть меню">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="hero__container container">
+        <button class="hero__arrow hero__arrow--left" aria-label="Назад">
+          <img src="icons/arrow-left.svg" alt="Назад" />
+        </button>
+        <div class="hero__content">
+          <h1 class="hero__title">The new phones are<br />here take a look.</h1>
+          <p class="hero__desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque in est dui,
+            aliquam, tempor. Faucibus morbi turpis.
+          </p>
+          <button class="hero__btn">Explore</button>
+        </div>
+        <div class="hero__image">
+          <img src="icons/hero-phones.svg" alt="Смартфоны" />
+        </div>
+        <div class="hero__dots">
+          <span class="hero__dot hero__dot--active"></span>
+          <span class="hero__dot"></span>
+          <span class="hero__dot"></span>
+        </div>
+        <button class="hero__arrow hero__arrow--right" aria-label="Вперед">
+          <img src="icons/arrow-right.svg" alt="Вперед" />
+        </button>
+      </div>
+    </section>
+    <section class="categories">
+      <div class="categories__header">
+        <h2 class="categories__title">Shop our latest offers and categories</h2>
+        <p class="categories__description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Select. Sed ut diam, aliquam.
+          Tempor. Faucibus morbi turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </div>
+      <div class="categories__grid">
+        <div class="category-laptop">
+          <img class="category-laptop__image" src="images/category-laptop.png" alt="Laptop" />
+          <span class="category-laptop__label">Laptops</span>
+          <h3 class="category-laptop__title">True Laptop<br />Solution</h3>
+        </div>
+        <div class="category-watch">
+          <img class="category-watch__image" src="images/category-watch.png" alt="Watch" />
+          <span class="category-watch__label">Watch</span>
+          <h3 class="category-watch__title">Not just<br />stylisht</h3>
+        </div>
+        <div class="category-phones">
+          <img class="category-phones__image" src="images/category-phones.png" alt="Phones" />
+          <span class="category-phones__label">Phones</span>
+          <h3 class="category-phones__title">Your day to day<br />life</h3>
+        </div>
+        <div class="category-tablet">
+          <img class="category-tablet__image" src="images/category-tablet.png" alt="Tablet" />
+          <span class="category-tablet__label">Tablet</span>
+          <h3 class="category-tablet__title">Empower your<br />work</h3>
+        </div>
+      </div>
+    </section>
+    <section class="sale">
+      <div class="sale__container">
+        <div class="sale__header">
+          <h2 class="sale__title">Save on our most selled items.</h2>
+          <p class="sale__desc">Our new Limited Edition Winter Design BESPOKE 4-Door Flex&trade;</p>
+        </div>
+        <div class="sale__grid">
+          <article class="product-card">
+            <div class="product-card__img-wrap">
+              <img
+                src="./images/sale-img/macbook-pro-13.png"
+                alt="MacBook Pro 13"
+                class="product-card__img"
+              />
+            </div>
+            <h3 class="product-card__title">MacBook Pro 13</h3>
+            <p class="product-card__desc">
+              Neque porro quisquam est qui dolorem ipsum quia dolor sit amet
+            </p>
+            <span class="product-card__price">$ 1,200.00 USD</span>
+          </article>
+          <article class="product-card">
+            <div class="product-card__img-wrap">
+              <img
+                src="./images/sale-img/smart-galaxy-watch-3.png"
+                alt="Smart Galaxy Watch 3"
+                class="product-card__img"
+              />
+            </div>
+            <h3 class="product-card__title">Smart Galaxy Watch 3</h3>
+            <p class="product-card__desc">
+              Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+              velit...
+            </p>
+            <span class="product-card__price">$ 199.00 USD</span>
+          </article>
+          <article class="product-card">
+            <div class="product-card__img-wrap">
+              <img
+                src="./images/sale-img/macbook-air-m1.png"
+                alt="MacBook Air M1"
+                class="product-card__img"
+              />
+            </div>
+            <h3 class="product-card__title">MacBook Air M1</h3>
+            <p class="product-card__desc">
+              Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+              velit...
+            </p>
+            <span class="product-card__price">$ 1,009.00 USD</span>
+          </article>
+          <article class="product-card">
+            <div class="product-card__img-wrap">
+              <img src="./images/sale-img/ipad.png" alt="iPad" class="product-card__img" />
+            </div>
+            <h3 class="product-card__title">iPad</h3>
+            <p class="product-card__desc">
+              Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+              velit...
+            </p>
+            <span class="product-card__price">$ 610.00 USD</span>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="best">
+      <div class="best__container">
+        <div class="best__header">
+          <h2 class="best__title">See the best around here</h2>
+          <p class="best__desc">Our new Limited Edition Winter Design BESPOKE 4-Door Flex&trade;</p>
+        </div>
+        <div class="best__grid">
+          <article class="best-card">
+            <span class="best-card__subtitle">Smart light bulb pack</span>
+            <h3 class="best-card__title">Latest and gratest</h3>
+            <a href="#" class="best-card__btn">Explore</a>
+            <img
+              src="./images/best-img/best-watch.png"
+              alt="Latest and gratest"
+              class="best-card__img"
+            />
+          </article>
+          <article class="best-card">
+            <span class="best-card__subtitle">Smart light bulb pack</span>
+            <h3 class="best-card__title">Best selling</h3>
+            <a href="#" class="best-card__btn">Explore</a>
+            <img
+              src="./images/best-img/best-phones.png"
+              alt="Best selling"
+              class="best-card__img"
+            />
+          </article>
+          <article class="best-card">
+            <span class="best-card__subtitle">Smart light bulb pack</span>
+            <h3 class="best-card__title">Every product</h3>
+            <a href="#" class="best-card__btn">Explore</a>
+            <img
+              src="./images/best-img/best-laptop.png"
+              alt="Every product"
+              class="best-card__img"
+            />
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="ideas">
+      <div class="ideas__container">
+        <div class="ideas__header">
+          <h2 class="ideas__title">Ideas have a place here</h2>
+          <p class="ideas__desc">
+            Our new Limited Edition Winter Design BESPOKE 4-Door Flex&trade;
+          </p>
+        </div>
+        <div class="ideas__content">
+          <div class="ideas__image-wrap">
+            <img
+              src="./images/ideas-img/ideas-book.png"
+              alt="Книга с дизайнами"
+              class="ideas__image"
+            />
+          </div>
+          <ul class="ideas__list">
+            <li class="ideas__item">We Make It Easy To Find The Great Design Talent, Easier...</li>
+            <li class="ideas__item">Road Design Handbook For The International Road...</li>
+            <li class="ideas__item">The Best Kept Secrets About Creative People</li>
+            <li class="ideas__item">We Make It Easy To Find The Great Design Talent, Easier...</li>
+          </ul>
+        </div>
+        <div class="ideas__footer">
+          <a href="#" class="ideas__link">
+            <span>See All</span>
+            <img src="icons/see-all.svg" alt="" class="ideas__link-icon"/>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="search-section">
+  <div class="search-section__container">
+    <div class="search-section__top">
+      <h2 class="search-section__title">Looking for anything else?</h2>
+      <form class="search-form" action="#" method="get">
+        <img src="icons/search-keyword.svg" alt="" class="search-form__icon"/>
+        <input type="text" class="search-form__input" placeholder="Search keyword" aria-label="Search keyword"/>
+      </form>
+      <div class="search-tags">
+        <button type="button" class="search-tags__btn">iPhone</button>
+        <button type="button" class="search-tags__btn">Charger</button>
+        <button type="button" class="search-tags__btn">Gift</button>
+        <button type="button" class="search-tags__btn">Google Pixel 3</button>
+        <button type="button" class="search-tags__btn">Keyboard</button>
+        <button type="button" class="search-tags__btn">13 Pro Max</button>
+        <button type="button" class="search-tags__btn">iPhone 12</button>
+        <button type="button" class="search-tags__btn">Laptop</button>
+        <button type="button" class="search-tags__btn">Mobile</button>
+      </div>
+    </div>
+    <div class="newsletter">
+      <h2 class="newsletter__title">Never miss a thing</h2>
+      <p class="newsletter__desc">Sign up for texts to be notified about our best offers on the perfect gifts.</p>
+      <img src="images/newsletter-img/newsletter-devices.png" alt="Devices" class="newsletter__img" />
+      <form class="newsletter-form" action="#" method="post">
+        <input type="email" class="newsletter-form__input" placeholder="Your email" aria-label="Your email" required/>
+        <button type="submit" class="newsletter-form__btn">Sign up</button>
+      </form>
+    </div>
+  </div>
+</section>
+  </body>
+</html>

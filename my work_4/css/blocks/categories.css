@@ -1,0 +1,366 @@
+.categories {
+   margin-top: 28px; 
+  position: relative;
+  width: 100%;
+  max-width: 1350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.categories__header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.categories__title {
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 125%;
+  text-align: center;
+  color: #000;
+  margin: 47px 0 9px 0;
+  font-family: var(--second-family);
+}
+
+.categories__description {
+  max-width: 550px;
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+  text-align: center;
+  font-family: var(--second-family);
+  color: #000;
+}
+
+.categories__grid {
+  position: relative;
+  width: 1294px;
+  height: 814px;
+  margin: 0 auto;
+}
+
+.category-laptop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 639px;
+  height: 472px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.category-laptop__image {
+  position: absolute;
+  top: 0;
+  left: 42px;
+  width: 500px;
+  height: 377px;
+  object-fit: contain;
+}
+
+.category-laptop__label {
+  position: absolute;
+  top: 375px;
+  right: 42px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 128%;
+  text-align: right;
+  color: #000;
+}
+
+.category-laptop__title {
+  position: absolute;
+  top: 395px;
+  left: 405px;
+  right: 42px;
+  margin: 0;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 120%;
+  text-align: right;
+  color: #000;
+}
+
+.category-watch {
+  position: absolute;
+  top: 544px;
+  left: 0;
+  width: 639px;
+  height: 270px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.category-watch__image {
+  position: absolute;
+  top: 0;
+  left: 42px;
+  right: 216px;
+  object-fit: contain;
+}
+
+.category-watch__label {
+  position: absolute;
+  top: 87px;
+  left: 550px;
+  right: 42px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 128%;
+  text-align: right;
+  color: #000;
+}
+
+.category-watch__title {
+  position: absolute;
+  top: 106px;
+  left: 469px;
+  right: 42px;
+  margin: 0;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 120%;
+  text-align: right;
+  color: #000;
+}
+
+.category-phones {
+  position: absolute;
+  top: 0;
+  left: 655px;
+  width: 312px;
+  height: 792px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.category-phones__image {
+  position: absolute;
+  top: 144px;
+  left: 16px;
+  bottom: 281px;
+  object-fit: contain;
+}
+
+.category-phones__label {
+  position: absolute;
+  inset: 552px 128px 220px;
+  text-align: center;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 128%;
+  text-align: center;
+  color: #000;
+}
+
+.category-phones__title {
+  position: absolute;
+  inset: 571px 31px 144px;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 120%;
+  text-align: center;
+  color: #000;
+}
+
+.category-tablet {
+  position: absolute;
+  top: 0;
+  left: 983px;
+  width: 312px;
+  height: 792px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.category-tablet__image {
+  position: absolute;
+  top: 252px;
+  object-fit: contain;
+}
+
+.category-tablet__label {
+  position: absolute;
+  top: 114px;
+  width: 100%;
+  text-align: center;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  text-align: center;
+  color: #000;
+}
+
+.category-tablet__title {
+  position: absolute;
+  top: 133px;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 120%;
+  text-align: center;
+  color: #000;
+}
+
+@media (max-width: 1315px) and (min-width: 1025px) {
+  .categories {
+    height: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .categories__header {
+    position: static;
+    margin-bottom: 40px;
+  }
+
+  .categories__grid {
+    position: static;
+    width: 100%;
+    height: auto;
+    transform: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 0 20px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .category-laptop,
+  .category-watch,
+  .category-phones,
+  .category-tablet {
+    position: static;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .category-laptop__image,
+  .category-watch__image,
+  .category-phones__image,
+  .category-tablet__image {
+    position: static;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-bottom: 15px;
+  }
+
+  .category-laptop__label,
+  .category-watch__label,
+  .category-phones__label,
+  .category-tablet__label,
+  .category-laptop__title,
+  .category-watch__title,
+  .category-phones__title,
+  .category-tablet__title {
+    position: static;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+  }
+
+  .category-laptop__title,
+  .category-watch__title,
+  .category-phones__title,
+  .category-tablet__title {
+    font-size: 28px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .categories {
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .categories__header {
+    position: static;
+    padding: 0 20px;
+    margin-bottom: 40px;
+  }
+
+  .categories__title {
+    font-size: 32px;
+  }
+
+  .categories__grid {
+    position: static;
+    width: 100%;
+    height: auto;
+    transform: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 0 20px;
+  }
+
+  .category-laptop,
+  .category-watch,
+  .category-phones,
+  .category-tablet {
+    position: static;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .category-laptop__image,
+  .category-watch__image,
+  .category-phones__image,
+  .category-tablet__image {
+    position: static;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .category-laptop__label,
+  .category-watch__label,
+  .category-phones__label,
+  .category-tablet__label,
+  .category-laptop__title,
+  .category-watch__title,
+  .category-phones__title,
+  .category-tablet__title {
+    position: static;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+  }
+
+  .category-laptop__title,
+  .category-watch__title,
+  .category-phones__title,
+  .category-tablet__title {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+}

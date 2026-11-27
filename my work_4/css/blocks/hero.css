@@ -1,0 +1,198 @@
+.hero {
+  padding-top: 30px;
+}
+
+.hero__container {
+  background-color: #DCE5E2;
+  border-radius: 32px;
+  height: 550px;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+
+.hero__content {
+  width: 588px; 
+  padding: 145px 0 0 56px; 
+  z-index: 2;
+}
+.hero__title {
+  font-family: var(--second-family, 'Redex Pro', sans-serif);
+  font-weight: 400;
+  font-size: 58px;
+  line-height: 1.2;
+  color: #000000;
+  margin: 0 0 20px 0;
+}
+
+.hero__desc {
+  font-family: var(--font-family, 'Inter', sans-serif);
+  font-size: 16px;
+  line-height: 1.2;
+  color: #000000;
+  width: 395px; 
+  margin: 0 0 19px 0; 
+}
+
+.hero__btn {
+  width: 170px;
+  height: 50px;
+  border: 1px solid #000;
+  border-radius: 200px;
+  background: transparent;
+  font-family: var(--font-family, 'Inter', sans-serif);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.2;
+  text-transform: capitalize;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 30px;
+}
+
+.hero__btn:hover {
+  background: #000;
+  color: #FFF;
+}
+
+.hero__image {
+  flex: 1; 
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.hero__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; 
+  object-position: right bottom; 
+  display: block;
+}
+
+.hero__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.hero__arrow--left { left: 10px; }
+.hero__arrow--right { right: 10px; }
+
+.hero__arrow img {
+  width: 14px;
+  height: 26px;
+}
+
+.hero__dots {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 34px;
+  z-index: 4;
+}
+
+.hero__dot {
+  width: 194px;
+  height: 2px;
+  background-color: #000000;
+  display: block;
+}
+
+
+@media (max-width: 900px) {
+  .hero__container {
+    flex-direction: column;
+    height: auto;
+    padding-bottom: 80px;
+  }
+
+  .hero__content {
+    width: 100%;
+    padding: 40px 20px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero__title {
+    font-size: 42px;
+  }
+
+  .hero__desc {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 19px auto;
+  }
+
+  .hero__image {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+  }
+
+  .hero__image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  .hero__dots {
+    bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* ... остальные стили для мобилки ... */
+
+  .hero__dots {
+    /* На мобилке делаем блок чуть шире, но с отступами по бокам */
+    width: 90%; 
+    max-width: 350px; /* Чтобы на планшетах не были слишком длинными */
+    gap: 10px; /* Уменьшаем расстояние между полосками */
+  }
+
+  .hero__dot {
+    /* Полоски становятся резиновыми: занимают равную часть пространства */
+    flex: 1; 
+    height: 2px;
+    /* width: 194px; <-- Это правило нужно убрать или переопределить */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__container {
+    padding-bottom: 60px;
+  }
+
+  .hero__content {
+    padding: 30px 15px;
+  }
+
+  .hero__title {
+    font-size: 32px;
+  }
+
+  .hero__desc {
+    font-size: 16px;
+  }
+
+  .hero__btn {
+    width: 140px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .hero__image img {
+    max-width: 250px;
+  }
+}
